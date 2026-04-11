@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Intern Verification Portal</title>
-    <!-- font awesome cdn link -->
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
@@ -48,8 +49,6 @@
             width: 100%;
             padding:2rem 7%;
             border-bottom: .1rem solid rgba(0,0,0,.1);
-            position: relative;
-            z-index: 1000;
         }
 
         header .logo{
@@ -83,18 +82,20 @@
         }
 
         .intern-details {
-            text-align: center;
             width: 100%;
             max-width: 60rem;
+            margin: 0 auto;
         }
 
         .intern-details h3 {
             font-size: 2.5rem;
             color: var(--violet);
             margin-bottom: 2rem;
+            text-align: center;
         }
 
         .intern-details p {
+            display: flex;
             font-size: 1.8rem;
             color: #666;
             margin: 1rem 0;
@@ -102,7 +103,9 @@
         }
 
         .intern-details p strong {
+            width: 180px;
             color: #333;
+            text-align: left;
         }
 
         .footer {
@@ -129,75 +132,56 @@
             body{ padding:1.5rem; }
             header{ padding:2rem; }
         }
-    /* Custom Alert Styles to match screenshot */
-    #custom-alert-overlay {
-        position: fixed;
-        top: 0; left: 0;
-        width: 100%; height: 100%;
-        background: rgba(0,0,0,0.4);
-        display: none;
-        align-items: flex-start;
-        justify-content: center;
-        z-index: 10000;
-        padding-top: 5rem;
-    }
 
-    #custom-alert {
-        background: #202124;
-        color: #e8eaed;
-        width: 448px;
-        max-width: 90%;
-        border-radius: 8px;
-        padding: 24px;
-        box-shadow: 0 1px 3px rgba(0,0,0,0.3);
-        font-family: 'Roboto', 'Nunito', sans-serif;
-    }
+        #custom-alert-overlay {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.4);
+            display: none;
+            align-items: flex-start;
+            justify-content: center;
+            z-index: 10000;
+            padding-top: 5rem;
+        }
 
-    .alert-header {
-        font-size: 15px;
-        font-weight: 500;
-        margin-bottom: 20px;
-        color: #e8eaed;
-        text-transform: none;
-    }
+        #custom-alert {
+            background: #202124;
+            color: #e8eaed;
+            width: 448px;
+            max-width: 90%;
+            border-radius: 8px;
+            padding: 24px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+        }
 
-    .alert-body {
-        font-size: 14px;
-        margin-bottom: 30px;
-        color: #bdc1c6;
-        text-transform: none;
-    }
+        .alert-header {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
 
-    .alert-footer {
-        display: flex;
-        justify-content: flex-end;
-    }
+        .alert-body {
+            font-size: 14px;
+            margin-bottom: 30px;
+        }
 
-    .alert-footer button {
-        background: #8ab4f8;
-        color: #202124;
-        border: none;
-        padding: 8px 16px;
-        border-radius: 20px;
-        font-size: 14px;
-        font-weight: 500;
-        cursor: pointer;
-        width: 64px;
-        height: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        .alert-footer {
+            display: flex;
+            justify-content: flex-end;
+        }
 
-    .alert-footer button:hover {
-        background: #93b9f9;
-        box-shadow: 0 1px 2px rgba(60,64,67,0.3), 0 1px 3px rgba(60,64,67,0.15);
-    }
+        .alert-footer button {
+            background: #8ab4f8;
+            color: #202124;
+            padding: 8px 16px;
+            border-radius: 20px;
+            cursor: pointer;
+        }
     </style>
 </head>
+
 <body onload="document.getElementById('custom-alert-overlay').style.display='flex'">
 
-<!-- Custom Alert Modal (Chrome Style) -->
 <div id="custom-alert-overlay">
     <div id="custom-alert">
         <div class="alert-header">aictecertify.slashmark.cloud says</div>
@@ -211,32 +195,34 @@
 <div class="container">
 
     <header>
-        <a href="https://slashmark.cloud/" class="logo">Slash&nbsp;<span>Mark</span>&nbsp;IT<span>&nbsp;Solutions</span></a>
+        <a href="https://slashmark.cloud/" class="logo">Slash <span>Mark</span> IT <span>Solutions</span></a>
     </header>
 
-    <img src="https://aictecertify.slashmark.cloud/images/Your%20paragraph%20text%20(6).png" alt="Verification Success Image" style="width: 100%; height: auto;">
+    <img src="https://aictecertify.slashmark.cloud/images/Your%20paragraph%20text%20(6).png" style="width:100%;">
 
-    <div style="text-align: center;">
-        <h1>Internship Completion Certificate<br> Successfully Verified!</h1>
+    <div>
+        <h1>Internship Completion Certificate Successfully Verified!</h1>
         <h1 class="small-text">
-            <img src="https://aictecertify.slashmark.cloud/images/checked.gif" alt="Verification Success Image" style="width: 10%; height: auto; min-width: 50px; margin: 0 auto; display: block;">
+            <img src="https://aictecertify.slashmark.cloud/images/checked.gif" style="width:10%;min-width:50px;display:block;margin:auto;">
         </h1>
     </div>
 
     <div class="verification-box">
-        <div class="intern-details text-center">
+        <div class="intern-details">
             <h3>Intern Details</h3>
+
             <p><strong>Name:</strong> CHALLA DILEEP VARMA</p>
-            <p><strong>InternID:</strong> SM181918</p>
+            <p><strong>Intern ID:</strong> SM181918</p>
             <p><strong>Domain:</strong> Machine Learning Internship</p>
             <p><strong>Batch:</strong> December 15, 2025 to April 15, 2026</p>
             <p><strong>No. Of Credits:</strong> 3</p>
-            <p><strong>Internship Status:</strong> Completed</p>     
+            <p><strong>Status:</strong> Completed</p>
+
         </div>
     </div>
 
     <section class="footer">
-        <div class="credit"><span> ©️ 2023 Slash Mark</span> | All rights reserved </div>
+        <div class="credit"><span>© 2023 Slash Mark</span> | All rights reserved</div>
     </section>
 
 </div>
